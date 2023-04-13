@@ -162,6 +162,10 @@ html, body{
         left: 0;
     }
 
+    .section-bg{
+        background-color: #eff5ff;
+    }
+
 
 @media (max-width: 1024px) {
     .menu-mobile{
