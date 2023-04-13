@@ -10,6 +10,23 @@ html, body{
     --border: #2c2f3f;
 }
 
+.menu-mobile{
+    position: fixed;
+    color: #fff;
+    background-color: #252c90;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 /*estilizando a barra de navegação  */
 
 #header{
@@ -136,3 +153,35 @@ html, body{
         text-decoration: none;
         color: #fff;
     }
+
+    .menu-nav-active{
+        overflow: hidden;
+    }
+
+    .menu-nav-active #header{
+        left: 0;
+    }
+
+
+@media (max-width: 1024px) {
+    .menu-mobile{
+        display: flex;
+    }
+
+    #header{
+        left: -300px;
+    }
+
+    section#inicio h2{
+        font-size: 2rem;
+    }
+
+    section#inicio #subtitle{
+        margin-right: 0;
+        font-size: 1rem;
+    }
+
+    #main{
+        margin-left: 0;
+    }
+}
