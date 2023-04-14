@@ -20,3 +20,26 @@ navItem.forEach(item => {
         }
     })
 })
+
+//ANIMAÇÃO PELO SCROLL 
+
+const item= document.querySelectorAll("[data-anime]");
+
+const animeScroll = () => {
+    const windowTop = window.pageYOffset + window.innerHeight * 0.90 ;
+
+    item.forEach(element => {
+        if (windowTop > element.offsetTop){
+            element.classList.add('animate');
+        }else{
+            element.classList.remove('animate');
+        }
+    })
+
+};
+
+window.addEventListener("scroll", () => {
+    animeScroll()
+})
+
+animeScroll();
