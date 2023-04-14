@@ -145,8 +145,52 @@ html, body{
         text-shadow: 4px 4px 10px #000000;
     }
 
+    .mobile-button{
+        display: none;
+    }
+
+    .btn-mob{
+        width: 130px;
+        height: 35px;
+        margin-left: 4px;
+        
+    }
+
+    .mobile-button .social-links-mobile a{
+        font-size: 1rem;
+        background: #212431;
+        color: #fff;
+        padding: 0.6rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .btn-mob.readme{
+        background: #252c90;
+        border: 0;
+        border-radius: 8px;
+    }
+
+    .btn-mob.readme a{
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        display: inline-block;
+    }
+    .btn-mob.contactme{
+        border-radius: 8px;
+        border: 3px solid #252c90;
+        background: none;
+        color: #fff;
+    }
+
+
+
     section#inicio div#arraste{
         width: 9rem;
+        display: flex;
     }
 
     section#inicio #arraste a{
@@ -262,6 +306,17 @@ html, body{
         margin-left: 0;
     }
 }
+
+@media (max-width: 745px){
+    .mobile-button{
+        display: block;
+    }
+
+    #main #inicio .col-md-7 #arraste{
+        display: none;
+    }
+}
+
 
 *::-webkit-scrollbar{
     width: 10px;
