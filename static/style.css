@@ -110,6 +110,10 @@ html, body{
     color: #149ddd;
 }
 
+.nav-menu .nav .nav-item .active i{
+    color: #149ddd;
+}
+
 /*final da estilização da barra de navegação */
 
 /*inicio da estilização da main*/
@@ -305,6 +309,7 @@ html, body{
     #main{
         margin-left: 0;
     }
+
 }
 
 @media (max-width: 745px){
@@ -315,6 +320,16 @@ html, body{
     #main #inicio .col-md-7 #arraste{
         display: none;
     }
+
+}
+
+@media (min-width: 1025px){
+    section#inicio,
+    section#sobre,
+    div#habilidades,
+    section#curriculo{
+    height: 100vh;
+}
 }
 
 
@@ -332,3 +347,5 @@ html, body{
     background-color: #252c90;
     border-radius: 4px;
 }
+
+

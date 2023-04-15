@@ -21,6 +21,28 @@ navItem.forEach(item => {
     })
 })
 
+
+//ATIVANDO A NAVEGAÇÃO 
+const sessao = document.querySelectorAll('.sessao')
+
+const ativeLink = () => {
+    const windowOffY = window.pageYOffset
+    const windowHeight = window.innerHeight
+    const soma = windowOffY + windowHeight * 0.90;
+    sessao.forEach(linka =>{
+        const elOffY = linka.offsetTop
+        var href = linka.getAttribute('id')
+        if (soma > elOffY && elOffY+30+this.innerHeight >windowOffY + windowHeight){
+            document.querySelector('.'+href).classList.add('active')
+        }else{
+            var hre = linka.getAttribute('id')
+            document.querySelector('.'+ hre).classList.remove('active')
+        }
+    })
+}
+
+ativeLink()
+
 //ANIMAÇÃO PELO SCROLL 
 
 const item= document.querySelectorAll("[data-anime]");
@@ -40,6 +62,7 @@ const animeScroll = () => {
 
 window.addEventListener("scroll", () => {
     animeScroll()
+    ativeLink()
 })
 
 animeScroll();
